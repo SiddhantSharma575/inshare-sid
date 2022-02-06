@@ -9,8 +9,9 @@ const connectDB = require("./config/db");
 connectDB();
 
 const corsOption = {
-  origin: process.env.ALLOWED_CLIENTS.split(","),
+  origin: "*",
 };
+console.log(process.env.ALLOWED_CLIENTS.split(","));
 app.use(cors(corsOption));
 app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs");
