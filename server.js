@@ -10,6 +10,8 @@ connectDB();
 
 const corsOption = {
   origin: "*",
+  credentials: true,
+  optionSuccessStatus: 200,
 };
 console.log(process.env.ALLOWED_CLIENTS.split(","));
 app.use(cors(corsOption));
